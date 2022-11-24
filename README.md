@@ -47,7 +47,7 @@ Initial Sampling:
 
 Spatiotemporal resampling is implemented `GIResampling` compute shader.
 
-Spatial resampling (`GIResampling.cs.slang`):
+Temporal resampling (`GIResampling.cs.slang`):
 
 1. for each pixel q do
   1. S ← InitialSampleBuffer[q]
@@ -57,7 +57,7 @@ Spatial resampling (`GIResampling.cs.slang`):
   5. R.W ← R.w / (R.M · p^(R.z))
   6. TemporalReservoirBuffer[q] ← R
 
-Temporal resampling (`GIResampling.cs.slang`):
+Spatial resampling (`GIResampling.cs.slang`):
 
 1. for each pixel q do
   1. R<sub>s</sub> ← SpatialReservoirBuffer[q]
